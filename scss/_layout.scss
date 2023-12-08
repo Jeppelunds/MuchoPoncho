@@ -1,0 +1,126 @@
+.header{ 
+    &-heading{
+        top: 80px;
+        z-index: 5;
+    }
+        
+        &-img-puncho{
+            position: absolute;
+        }
+    
+        &-img-rain{
+         position: absolute;
+         top: 0;
+         left: 0;
+        }
+
+        &-icon{
+            position: absolute;
+            font-size: 4rem;
+            bottom: 2px;
+        }
+    
+         
+    }
+
+
+    .products{
+    
+        &-heading{
+            margin-top: 50px;
+        }
+    
+        &-wrapper{
+            margin-top: 40px
+        }
+    
+        &-product{
+
+            .description{
+                bottom: 20px;
+                left: 50px;
+            }
+        }
+    
+    }
+
+    .about-us{
+
+        &-header{
+            margin-top: 20px;
+        }
+
+        &-paragraph{
+            margin-top: 20px;
+        }
+    }
+
+
+    .navbar{
+        position: relative;
+        z-index: 200;
+    
+        &-navigation{
+    
+    
+            &-right{
+                width: 100vw;
+                height: 100vh;
+                background-color: #c5b7b7e8;
+                position: fixed;
+                right: -100vw;
+                @include flexLayout;
+                transition: right .8s cubic-bezier(1,0,0,1);
+                font-family: $font-sunshiney;
+            }
+    
+            .nav-list{
+                &-item{
+                    list-style: none;
+                }
+    
+                &-link{
+                    font-size: 50px;
+                    @include textStyles(capitalize);
+                    color: $color-secondary;
+                    text-decoration: none;
+                    display: block;
+                    margin: 20px;
+                    text-align: center;
+                    transition: all 0.5s;
+    
+                    &:hover{
+                    color: $color-primary;
+                    letter-spacing: 4px;
+                }
+                }
+    
+                
+            }
+        }
+    }
+    
+    
+        .checkbox:checked ~ .navbar-navigation .navbar-navigation-left{
+            left: 0;
+        }
+    
+        .checkbox:checked ~ .navbar-navigation .navbar-navigation-right{
+            right: 0;
+        }
+    
+        .checkbox:checked ~ .hamburger-menu .menu{
+            transform: rotateZ(90deg);
+        }
+        
+        .checkbox:checked ~ .hamburger-menu .menu-line-1{
+            transform: rotateZ(-40deg);
+        }
+    
+        .checkbox:checked ~ .hamburger-menu .menu-line-2{
+            opacity: 0;
+        }
+    
+        .checkbox:checked ~ .hamburger-menu .menu-line-3{
+            transform: rotateZ(40deg);
+        }
