@@ -134,8 +134,7 @@ html {
 .header-img-rain {
   width: 100%;
   height: 100%;
-  background-image: url(images/rain-gif.gif);
-  animation: rain 1s linear infinite;
+  background-image: url(../images/rain-gif.gif);
   opacity: 0.3;
 }
 .header-icon {

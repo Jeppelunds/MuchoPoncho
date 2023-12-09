@@ -26,8 +26,7 @@ height: 100vh;
 
     &-img-rain{
      @include fullSpace;
-     background-image: url(images/rain-gif.gif);
-     animation: rain 1s linear infinite;
+     background-image: url(../images/rain-gif.gif);
      opacity: 0.3;
     }
 
